@@ -18,3 +18,11 @@ python interface.py
 
 You will be prompted to choose a function and provide the required input values.
 The program then prints the calculated probabilities.
+
+## Running Tests
+
+Run the unit tests with [pytest](https://pytest.org):
+
+```bash
+pytest -q
+```
