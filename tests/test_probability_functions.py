@@ -1,5 +1,6 @@
 import sys, os; sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 import math
+import pytest
 import probability_functions as pf
 
 
@@ -10,6 +11,12 @@ def test_logistic_sigmoid_zero():
 def test_logistic_sigmoid_values():
     assert math.isclose(pf.logistic_sigmoid(1), 0.7310585786300049, rel_tol=1e-9)
     assert math.isclose(pf.logistic_sigmoid(-1), 0.2689414213699951, rel_tol=1e-9)
+
+
+def test_logistic_sigmoid_large_negative():
+    # Should not overflow and should be very close to 0
+    result = pf.logistic_sigmoid(-1000)
+    assert math.isclose(result, 0.0, abs_tol=1e-12)
 
 
 def test_softmax_basic():
@@ -36,3 +43,8 @@ def test_gaussian_pdf_symmetry():
         pf.gaussian_pdf(-0.5, mu=0.0, sigma=1.0),
         rel_tol=1e-9,
     )
+
+
+def test_gaussian_pdf_invalid_sigma():
+    with pytest.raises(ValueError):
+        pf.gaussian_pdf(0.0, sigma=0)
