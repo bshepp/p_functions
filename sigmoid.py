@@ -42,25 +42,29 @@ def arc_tangent():
     at = math.atan(x)
     return at
 
-def gudermannian():
-    gm = 0
-    return gm
+def gudermannian(x: float = 1.0) -> float:
+    """Gudermannian function: gd(x) = 2*arctan(tanh(x/2))"""
+    return 2 * math.atan(math.tanh(x / 2))
 
-def error_function():
-    ef = 0
-    return ef
+def error_function(x: float = 1.0) -> float:
+    """Error function approximation using tanh: erf(x) ≈ tanh(1.2*x)"""
+    return math.tanh(1.2 * x)
 
-def generalised_logistic_function():
-    glf = 0
-    return glf
+def generalised_logistic_function(x: float = 1.0, A: float = 0.0, K: float = 1.0, B: float = 1.0, Q: float = 1.0, C: float = 1.0, M: float = 0.0) -> float:
+    """Generalized logistic function: A + (K-A) / (C + Q*exp(-B*(x-M)))^(1/C)"""
+    return A + (K - A) / ((C + Q * math.exp(-B * (x - M))) ** (1 / C))
 
-def smooth_step():
-    st = 0
-    return st
+def smooth_step(x: float = 1.0) -> float:
+    """Smooth step function: 3x² - 2x³ for x ∈ [0,1], clamped elsewhere"""
+    if x <= 0:
+        return 0.0
+    elif x >= 1:
+        return 1.0
+    return 3 * x * x - 2 * x * x * x
 
-def algerbraic_function_a():
-    afa = 0
-    return afa
+def algebraic_sigmoid(x: float = 1.0) -> float:
+    """Algebraic sigmoid: x / sqrt(1 + x²)"""
+    return x / math.sqrt(1 + x * x)
 
 if __name__ == "__main__":
     print("Answer math.exp Module:", math_sig())

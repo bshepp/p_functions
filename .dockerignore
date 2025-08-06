@@ -1,0 +1,77 @@
+# Git and version control
+.git/
+.gitignore
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
+$Temp/
+
+# Development and testing
+.pytest_cache/
+.coverage
+.tox/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+
+# Documentation build
+docs/_build/
+/site
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+logs/
+
+# Data and model files (often large)
+data/
+models/
+checkpoints/
+*.pkl
+*.pickle
+*.h5
+*.hdf5
+
+# Local configuration and secrets
+.env
+.env.*
+secrets.json
+config.local.py
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+target/
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints
+
+# Package manager files
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Backup files
+*.bak
+*~

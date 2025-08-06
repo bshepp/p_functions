@@ -127,3 +127,51 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.#*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific
+$Temp/
+*.tmp
+*.temp
+
+# Modern Python tools
+.ruff_cache/
+.black/
+
+# Data Science / ML
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+data/
+models/
+checkpoints/
+logs/
+wandb/
+
+# Performance profiling
+*.prof
+*.pstat
+
+# Local configuration
+.env.local
+.env.*.local
+config.local.py
+secrets.json
