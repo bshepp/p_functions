@@ -1,7 +1,10 @@
 import sys, os; sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 import math
 import pytest
-import probability_functions as pf
+try:
+    from p_functions import probability_functions as pf  # type: ignore
+except Exception:
+    import probability_functions as pf  # type: ignore
 
 
 def test_logistic_sigmoid_zero():

@@ -3,7 +3,12 @@
 from typing import List, Optional
 import sys
 
-import probability_functions as pf
+# Support both "installed package" (p_functions.probability_functions)
+# and "repo root execution" (plain probability_functions on PYTHONPATH)
+try:  # pragma: no cover - simple import fallback
+    from p_functions import probability_functions as pf  # type: ignore
+except Exception:  # pragma: no cover
+    import probability_functions as pf  # type: ignore
 
 
 def get_float(prompt: str, min_val: Optional[float] = None, max_val: Optional[float] = None) -> float:

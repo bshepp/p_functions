@@ -42,12 +42,12 @@ api = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/username/p_functions"
-Repository = "https://github.com/username/p_functions.git"
-Issues = "https://github.com/username/p_functions/issues"
+Homepage = "https://github.com/bshepp/p_functions"
+Repository = "https://github.com/bshepp/p_functions.git"
+Issues = "https://github.com/bshepp/p_functions/issues"
 
 [project.scripts]
-p-functions = "interface:main"
+p-functions = "p_functions.interface:main"
 
 [tool.setuptools]
 packages = ["p_functions"]

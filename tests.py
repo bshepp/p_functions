@@ -8,7 +8,10 @@ import os
 # Add project root to path for imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-import probability_functions as pf
+try:
+    from p_functions import probability_functions as pf  # type: ignore
+except Exception:
+    import probability_functions as pf  # type: ignore
 import sigmoid
 import relu
 
