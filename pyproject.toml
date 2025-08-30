@@ -36,10 +36,6 @@ dev = [
     "black>=22.0",
     "isort>=5.0",
 ]
-api = [
-    "anthropic>=0.60.0",
-    "pydantic>=2.11.7",
-]
 
 [project.urls]
 Homepage = "https://github.com/bshepp/p_functions"
