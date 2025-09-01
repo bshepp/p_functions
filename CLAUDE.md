@@ -32,6 +32,9 @@ python tests.py
 # Test specific function families
 python sigmoid.py    # Benchmark sigmoid variants
 python relu.py       # Benchmark ReLU variants
+
+# Or with pytest
+pytest
 ```
 
 ### Code Quality
@@ -63,7 +66,13 @@ p-functions
 - **Test coverage** is assertion-based with mathematical validation (not pytest framework)
 
 ### Import Patterns  
-The project uses relative imports between modules. When adding new functions:
+Preference is to import from the package when installed:
+- `from p_functions import probability_functions as pf`
+
+When running from the repo root, direct module imports also work:
+- `import probability_functions as pf`
+
+When adding new functions:
 - Core probability functions go in `probability_functions.py`
 - Sigmoid variants and comparisons go in `sigmoid.py`
 - ReLU family functions go in `relu.py`

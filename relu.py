@@ -5,12 +5,20 @@ import timeit
 #https://en.wikipedia.org/wiki/Rectifier_(neural_networks)
 
 def soft_plus(x: float = 1.0) -> float:
-    """Softplus function: ln(1 + exp(x))"""
-    return math.log(1 + math.exp(x))
+    """Softplus function with numerical stability.
+
+    Uses the stable identity: softplus(x) = log1p(exp(-|x|)) + max(x, 0)
+    """
+    return math.log1p(math.exp(-abs(x))) + (x if x > 0 else 0.0)
 
 def soft_plus_sharpness(x: float = 1.0, beta: float = 1.0) -> float:
-    """Softplus with sharpness parameter: (1/beta) * ln(1 + exp(beta*x))"""
-    return (1 / beta) * math.log(1 + math.exp(beta * x))
+    """Softplus with sharpness parameter, numerically stable.
+
+    Stable identity: (1/β) * [log1p(exp(-β|x|)) + max(βx, 0)]
+    """
+    if beta <= 0:
+        raise ValueError("beta must be positive")
+    return (math.log1p(math.exp(-beta * abs(x))) + max(beta * x, 0.0)) / beta
 
 def swish(x: float = 1.0) -> float:
     """Swish activation function: x * sigmoid(x) = x / (1 + exp(-x))"""
