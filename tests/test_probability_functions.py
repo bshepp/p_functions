@@ -1,6 +1,9 @@
-import sys, os; sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+import sys, os
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 import math
 import pytest
+
 try:
     from p_functions import probability_functions as pf  # type: ignore
 except Exception:
