@@ -1,0 +1,55 @@
+# Files and directories AI agents should ignore by default
+# Mirrors most of .claudeignore with a few generic additions
+
+# Environments and installed packages
+venv/
+.venv/
+env/
+ENV/
+site-packages/
+__pycache__/
+*.py[cod]
+
+# Build and dist
+build/
+dist/
+*.egg-info/
+.pip-wheel-metadata/
+
+# Large data/models
+data/
+models/
+checkpoints/
+logs/
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.parquet
+*.csv
+*.json
+*.xlsx
+
+# Caches
+.cache/
+.hypothesis/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.black/
+
+# IDE/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+$Temp/
+
+# Secrets
+.env
+.env.*
+secrets.json
+config.local.py
+*.key
+*.pem
