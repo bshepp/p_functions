@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "p_functions"
-version = "0.3.0"
+version = "0.3.1"
 description = "Utilities for experimenting with probability-related functions used in machine learning"
 readme = "README.md"
 license = {text = "MIT"}
@@ -36,18 +36,14 @@ dev = [
     "black>=22.0",
     "isort>=5.0",
 ]
-api = [
-    "anthropic>=0.60.0",
-    "pydantic>=2.11.7",
-]
 
 [project.urls]
-Homepage = "https://github.com/username/p_functions"
-Repository = "https://github.com/username/p_functions.git"
-Issues = "https://github.com/username/p_functions/issues"
+Homepage = "https://github.com/bshepp/p_functions"
+Repository = "https://github.com/bshepp/p_functions.git"
+Issues = "https://github.com/bshepp/p_functions/issues"
 
 [project.scripts]
-p-functions = "interface:main"
+p-functions = "p_functions.interface:main"
 
 [tool.setuptools]
 packages = ["p_functions"]

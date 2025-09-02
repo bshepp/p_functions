@@ -31,9 +31,15 @@ Comprehensive utilities for experimenting with probability-related functions and
 python interface.py
 ```
 
+Or after install (editable or wheel):
+```bash
+p-functions
+```
+
 ### Direct Usage
 ```python
-import probability_functions as pf
+# When installed as a package
+from p_functions import probability_functions as pf
 
 # Sigmoid activation
 result = pf.logistic_sigmoid(2.5)
