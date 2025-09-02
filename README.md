@@ -28,7 +28,7 @@ Comprehensive utilities for experimenting with probability-related functions and
 
 ### Interactive Interface
 ```bash
-python interface.py
+python -m p_functions.interface
 ```
 
 Or after install (editable or wheel):
@@ -54,10 +54,10 @@ density = pf.gaussian_pdf(1.5, mu=0, sigma=1)
 ### Benchmarking
 ```bash
 # Compare sigmoid implementations
-python sigmoid.py
+python -m p_functions.sigmoid
 
 # Compare ReLU variants  
-python relu.py
+python -m p_functions.relu
 ```
 
 ## 🧪 Testing
@@ -91,16 +91,20 @@ pip install -r requirements.txt
 | **Sigmoid Variants** | 10+ implementations | Performance comparison, mathematical variants |
 | **ReLU Family** | 9+ activation types | Modern ML activations, parameterized versions |
 
-## 🆕 Recent Updates (v0.3.0)
+## 🆕 Recent Updates
 
-- ✅ **Complete Implementation**: All 16 previously missing activation functions now implemented
-- ✅ **Enhanced Interface**: Improved CLI with better error handling and user experience  
-- ✅ **Dependencies Updated**: Latest stable NumPy (2.3.2) and SciPy (1.16.0)
-- ✅ **Comprehensive Testing**: Full test coverage with mathematical validation
-- ✅ **Documentation**: Professional README, CLAUDE.md for AI development
-- ✅ **Project Infrastructure**: pyproject.toml, requirements.txt, multiple ignore files
-- ✅ **Type Safety**: Complete type hints throughout codebase
-- ✅ **Numerical Stability**: Improved implementations for edge cases
+### v0.3.1
+- ✅ Adopt `src/` layout for clean packaging
+- ✅ Fix CLI entrypoint (`p-functions`) and installed imports
+- ✅ Add minimal CI (3.11/3.12) with black, mypy (non-blocking), pytest
+- ✅ Stabilize `soft_plus` and `soft_plus_sharpness` numerically
+- ✅ Remove unused Anthropic/Pydantic deps
+
+### v0.3.0
+- ✅ Complete implementation of missing activations
+- ✅ Enhanced interface and error handling  
+- ✅ Dependencies updated to NumPy 2.3.x / SciPy 1.16.x
+- ✅ Comprehensive testing and docs; improved numerical stability
 
 ## 🛠️ Development
 
