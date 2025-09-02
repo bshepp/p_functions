@@ -49,7 +49,7 @@ p-functions = "p_functions.interface:main"
 packages = ["p_functions"]
 
 [tool.setuptools.package-dir]
-p_functions = "."
+p_functions = "src/p_functions"
 
 [tool.black]
 line-length = 88
@@ -65,4 +65,4 @@ warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true
 explicit_package_bases = true
-files = ["p_functions"]
+files = ["src/p_functions"]

@@ -38,7 +38,7 @@ p-functions
 
 ### Direct Usage
 ```python
-# When installed as a package
+# When installed as a package (src layout)
 from p_functions import probability_functions as pf
 
 # Sigmoid activation

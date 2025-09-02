@@ -5,15 +5,15 @@ import math
 import sys
 import os
 
-# Add project root to path for imports
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+# Allow running tests from repo root without install
+repo_root = os.path.dirname(os.path.abspath(__file__))
+src_path = os.path.join(repo_root, "src")
+if src_path not in sys.path:
+    sys.path.insert(0, src_path)
 
-try:
-    from p_functions import probability_functions as pf  # type: ignore
-except Exception:
-    import probability_functions as pf  # type: ignore
-import sigmoid
-import relu
+from p_functions import probability_functions as pf
+from p_functions import sigmoid
+from p_functions import relu
 
 
 def test_probability_functions():

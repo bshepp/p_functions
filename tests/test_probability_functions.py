@@ -1,13 +1,12 @@
 import sys, os
-
-sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
+repo_root = os.path.dirname(os.path.dirname(__file__))
+src_path = os.path.join(repo_root, "src")
+if src_path not in sys.path:
+    sys.path.insert(0, src_path)
 import math
 import pytest
 
-try:
-    from p_functions import probability_functions as pf  # type: ignore
-except Exception:
-    import probability_functions as pf  # type: ignore
+from p_functions import probability_functions as pf
 
 
 def test_logistic_sigmoid_zero():
